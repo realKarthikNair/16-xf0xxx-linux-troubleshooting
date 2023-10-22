@@ -15,7 +15,7 @@ Making linux related notes and troubelshooting for my new HP Omen 16 R7 7840HS R
 | Headphone jack |  | - Headphone jack is buggy. I will update this section later. |
 | Microphone | :heavy_check_mark: |  - Microphone works as expected. |
 | Webcam | :heavy_check_mark: |  - Webcam works as expected. |
-| Fans | :heavy_check_mark: |  - Fans seems to work fine (it does rotate when temps are above 40-50 degree celcius) though lm-sensors doesn't show the fan speed. <br><br> - I will update this section later. |
+| Fans | :heavy_check_mark: |  - Fans seems to work fine (it does rotate when temps are above 40-50 degree celcius) though lm-sensors doesn't show the fan speed. <br><br> - I will update this section later. <br><br> - You can't manually control fans of this machine on Linux yet |
 | Touchpad | :heavy_check_mark: |  - Touchpad works as expected. <br><br> - multi touch gestures works too. |
 | Fingerprint reader |  |  - My model doesn't have a fingerprint reader. Someone else will have to test this. |
 | USB ports | :heavy_check_mark: <br><br> (Please read the notes on this one) | - All USB ports work fine <br><br> - I am yet to test their data transfer speeds and charging (if supported) and reverse charging capabilities. |
