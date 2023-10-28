@@ -1,0 +1,11 @@
+### Enable wayland on Pop!_OS 22.04
+
+1. In `/etc/gdm3/custom.conf`, comment out the below line and save the file
+    ```
+    WaylandEnable=false
+    ```
+    
+    prepend a # to comment so that it looks like this
+    ```
+    # WaylandEnable=false
+    ```
