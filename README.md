@@ -2,7 +2,8 @@ Making linux related notes and troubleshooting for HP Omen 16 R7 7840HS RTX 4060
 
 # What works and what doesn't
 
-**Based on Pop!_OS 22.04**
+**Based on Pop!_OS 22.04**  
+
 *Wherever I haven't mentioned "Windows", the issue affects Linux only.*
 
 | Component | Works? | Notes |
