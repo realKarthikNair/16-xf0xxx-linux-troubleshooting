@@ -1,4 +1,4 @@
-Making linux related notes and troubelshooting for my new HP Omen 16 R7 7840HS RTX 4060 (16-xf0xxx) 
+Making linux related notes and troubleshooting for HP Omen 16 R7 7840HS RTX 4060 (16-xf0xxx) 
 
 # What works and what doesn't
 
