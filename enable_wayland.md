@@ -26,3 +26,4 @@
     # RUN+="/usr/libexec/gdm-runtime-config set daemon WaylandEnable false"
     ```
 
+3. Enable DRM for NVIDIA driver: Add `nvidia-drm.modeset=1` to `/boot/efi/loader/entries/Pop_OS-current.conf`
