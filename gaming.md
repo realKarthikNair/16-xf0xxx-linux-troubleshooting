@@ -35,8 +35,14 @@ flatpak override com.usebottles.bottles --user --filesystem=xdg-data/application
 
    ![image](https://github.com/realKarthikNair/16-xf0xxx-linux-troubleshooting/assets/78267371/bd4a4c88-b14f-4013-b8c8-f2a5debb10c6)
 
+   Install vkBasalt for Post Processing effects
 
-6. Now before launching the game, make these changes in Cyberpunk 2077 Bottles settings for good results
+   ```bash
+   flatpak install org.freedesktop.Platform.VulkanLayer.vkBasalt/x86_64/22.08
+   ```
+
+
+7. Now before launching the game, make these changes in Cyberpunk 2077 Bottles settings for good results
 
 ![image](https://github.com/realKarthikNair/16-xf0xxx-linux-troubleshooting/assets/78267371/a0ea0225-04fb-4dcd-ae97-9df5c95e1bc2)
 ![image](https://github.com/realKarthikNair/16-xf0xxx-linux-troubleshooting/assets/78267371/f7ab6927-e06b-49e8-a099-a3fe801c3dd9)
