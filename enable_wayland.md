@@ -26,4 +26,5 @@
     # RUN+="/usr/libexec/gdm-runtime-config set daemon WaylandEnable false"
     ```
 
-3. Enable DRM for NVIDIA driver: Add `nvidia-drm.modeset=1` to `/boot/efi/loader/entries/Pop_OS-current.conf`
+3. Enable DRM for NVIDIA driver: Add `nvidia-drm.modeset=1` to `/boot/efi/loader/entries/Pop_OS-current.conf`4
+4. Reboot and choose Wayland in after clicking on the clog icon on GDM login screen (bottom right)
