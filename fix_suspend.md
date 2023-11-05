@@ -25,3 +25,4 @@
   ```bash
   sudo dpkg --configure -a
   ```
+5. Reboot
