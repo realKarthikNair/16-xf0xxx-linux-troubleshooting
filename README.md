@@ -21,6 +21,6 @@ Making linux related notes and troubleshooting for HP Omen 16 R7 7840HS RTX 4060
 | Touchpad | :heavy_check_mark: |  - Touchpad works as expected. <br><br> - multi touch gestures works too. |
 | Fingerprint reader |  |  - My model doesn't have a fingerprint reader. Someone else will have to test this. |
 | USB ports | :heavy_check_mark: <br><br> (Please read the notes on this one) | - All USB ports work fine <br><br> - I am yet to test their data transfer speeds and charging (if supported) and reverse charging capabilities. |
-| Bluetooth | :heavy_check_mark: | - Works fine but uses version 4.1 instead of 5.3 <br><br> - Will update if I found a driver | 
+| Bluetooth | :heavy_check_mark: | | 
 | WiFi | :heavy_check_mark: | - HP has put a MediaTek wifi card in this laptop. It works fine most of the time but **does glitch sometimes in both Linux and Windows | 
 | Suspend/sleep | :heavy_check_mark: | If you face random logouts after waking up from suspend, follow [this](https://github.com/realKarthikNair/16-xf0xxx-linux-troubleshooting/blob/main/fix_suspend.md) | 
