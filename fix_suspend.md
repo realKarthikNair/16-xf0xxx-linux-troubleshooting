@@ -1,4 +1,4 @@
-_For Pop!_OS 22.04 only. However, the steps (not the commands) should be same for other distributions too_
+_For Pop!\_OS 22.04 only. However, the steps (not the commands) should be same for other distributions too_
 
 1. Unmount and remount /boot/efi as rw
 
