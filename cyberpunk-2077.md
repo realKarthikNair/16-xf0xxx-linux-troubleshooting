@@ -1,4 +1,4 @@
-#### I am not really a gamer but here is how you can manage to run Cyberpunk 2077 on this laptop on Linux (Pop!_OS 22.02)
+#### Here is how you can run Cyberpunk 2077 on this laptop on Linux (Pop!_OS 22.02)
 
 *I expect the reader to have basic familiarity using [Bottles](https://usebottles.com/)*
 
@@ -15,7 +15,7 @@
        flatpak install flathub com.github.tchx84.Flatseal
    
    
-     b. I am too lazy to type so refer these screenshots
+     b. 
 
       ![image](https://github.com/realKarthikNair/16-xf0xxx-linux-troubleshooting/assets/78267371/7ae40446-5f41-4c03-bb8d-199a9e1f344f)
       ![image](https://github.com/realKarthikNair/16-xf0xxx-linux-troubleshooting/assets/78267371/21188944-2cb5-4fcb-83a5-da5c57d5c99e)
@@ -42,7 +42,7 @@ flatpak override com.usebottles.bottles --user --filesystem=xdg-data/application
    ```
 
 
-7. Now before launching the game, make these changes in Cyberpunk 2077 Bottles settings for good results
+6. Now before launching the game, make these changes in Cyberpunk 2077 Bottles settings for good results
 
 ![image](https://github.com/realKarthikNair/16-xf0xxx-linux-troubleshooting/assets/78267371/a0ea0225-04fb-4dcd-ae97-9df5c95e1bc2)
 ![image](https://github.com/realKarthikNair/16-xf0xxx-linux-troubleshooting/assets/78267371/f7ab6927-e06b-49e8-a099-a3fe801c3dd9)
@@ -52,3 +52,10 @@ flatpak override com.usebottles.bottles --user --filesystem=xdg-data/application
 
 ![image](https://github.com/realKarthikNair/16-xf0xxx-linux-troubleshooting/assets/78267371/3ddf4b15-d46e-43f4-a3b6-90c95affd76b)
 
+8. If the keyboard is detected as a controller, follow this 
+
+Backup the original Cyberpunk2077.exe file and then run this 
+
+   ```bash
+   echo '2C45C6: EB' | xxd -r - Cyberpunk2077.exe
+   ```
