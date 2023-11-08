@@ -1,11 +1,17 @@
-`/etc/UPower/UPower.conf`
+**Warning: step 4 is risky (if anything goes wrong, you'll have a dead motherboard in worst cases). Do not do these steps unless hibernation feature is vital for you** 
+
+> Assuming you already have set up a swap partition >=RAM while setting up Fedora
+
+1. `/etc/UPower/UPower.conf`
 
 ```
 CriticalPowerAction=Hibernate
 ```
 
-```bash
-karthik@fedora:~$ cat /usr/lib/systemd/system-sleep/nvidia 
+
+2. replace the contents of `/usr/lib/systemd/system-sleep/nvidia` with 
+
+```
 #!/bin/bash
 
 case $1/$2 in
@@ -21,5 +27,9 @@ case $1/$2 in
     ;;
 esac
 ```
-Use https://github.com/DavidS95/Smokeless_UMAF and set Modern Standby Type to `<Modern Standby + s0i2+ s0i3>`
 
+3. [RISKY STEP] Use https://github.com/DavidS95/Smokeless_UMAF and set Modern Standby Type to `<Modern Standby + s0i2+ s0i3>` 
+
+
+
+ 
