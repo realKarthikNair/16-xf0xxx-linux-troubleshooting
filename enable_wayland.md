@@ -1,5 +1,7 @@
 ### Enable wayland on Pop!_OS 22.04
 
+**Wayland works out of the box on Fedora 38+**
+
 > ⚠️ It works for me but if something breaks for you, I won't be able to help. So please don't make these changes if you're pretty new to Linux and/or can't troubleshoot issues that may arise.... 
 
 1. In `/etc/gdm3/custom.conf`, comment out the below line 
