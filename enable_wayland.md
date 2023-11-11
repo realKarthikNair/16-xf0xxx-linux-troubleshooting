@@ -1,3 +1,23 @@
+Index
+
+[On Fedora](#enable-wayland-on-fedora-workstation-gnome)
+[On Pop!_OS](#enable-wayland-on-pop_os-2204)
+
+### Enable wayland on Fedora Workstation (gnome)
+
+If wayland isn't working already (which should be in most of the cases) follow these
+
+1. 
+
+```bash
+mkdir -p /home/$USER/backup/usr/lib/udev/rules.d/
+sudo mv /usr/lib/udev/rules.d/61-gdm.rules /home/$USER/backup/usr/lib/udev/rules.d/
+```
+
+2. Reboot.
+
+3. You should have the Wayland option in GDM password window's bottom right corner clog button. 
+
 ### Enable wayland on Pop!_OS 22.04
 
 **Wayland works out of the box on Fedora 38+**
