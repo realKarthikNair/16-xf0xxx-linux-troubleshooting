@@ -1,7 +1,9 @@
-> This guide exists because neither distro repos nor the official page of NVIDIA drivers download the "latest" drivers for Linux.
-> It is partially because certain software doesn't fully support the latest drivers as soon as they are released. 
+*This guide exists because neither distro repos nor the official page of NVIDIA drivers download the "latest" drivers for Linux.
+It is partially because certain software doesn't fully support the latest drivers as soon as they are released.*
 
 Assuming you understand the pros (several, including better Wayland support) and cons (mainly the need to reinstall drivers after every kernel update)
+
+> If you are using Pop!_OS, use [this](https://github.com/realKarthikNair/16-xf0xxx-linux-troubleshooting/blob/main/nvidia-latest-driver-Pop!_OS.md) guide instead
 
 1. Go to the bottom-most version in [this](https://download.nvidia.com/XFree86/Linux-x86_64/) page
 
