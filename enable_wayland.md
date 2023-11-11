@@ -1,6 +1,6 @@
 Index
 
-[On Fedora](#enable-wayland-on-fedora-workstation-gnome)
+[On Fedora](#enable-wayland-on-fedora-workstation-gnome)  
 [On Pop!_OS](#enable-wayland-on-pop_os-2204)
 
 ### Enable wayland on Fedora Workstation (gnome)
