@@ -5,7 +5,7 @@ Index
 
 ### Enable wayland on Fedora Workstation (gnome)
 
-If wayland isn't working already (which should be in most of the cases) follow these
+If wayland isn't working already (Wayland should be working even with NVIDIA GPU on Fedora in most of the cases) follow these
 
 1. 
 
