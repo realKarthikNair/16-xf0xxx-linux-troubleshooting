@@ -59,3 +59,9 @@ Backup the original Cyberpunk2077.exe file and then run this
    ```bash
    echo '2C45C6: EB' | xxd -r - Cyberpunk2077.exe
    ```
+
+9. To solve touchpad gestures crashing the session on Wayland
+
+   ```bash
+   xinput list --name-only | grep ^xwayland-pointer-gestures | xargs -n1 xinput disable
+   ```
