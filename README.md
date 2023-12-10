@@ -24,4 +24,4 @@ Making linux related notes and troubleshooting for HP Omen 16 R7 7840HS RTX 4060
 | Bluetooth | :heavy_check_mark: | | 
 | WiFi | :heavy_check_mark: | - HP has put a MediaTek wifi card in this laptop. It works fine most of the time but **does glitch sometimes in both Linux and Windows | 
 | Suspend/sleep | :heavy_check_mark: | - If you face random logouts after waking up from suspend, follow [this](https://github.com/realKarthikNair/16-xf0xxx-linux-troubleshooting/blob/main/fix_suspend.md) <br><br> - Suspend doesn't work if sleep state is set to S3 (deep) | 
-| Hibernation |  | - Couldn't figure out a way to make it work on Pop!_OS/Ubuntu <br><br> - Works on Fedora with [some workarounds](fedora-hibernate.md) |
+| Hibernation |  | - Couldn't figure out a way to make it work on Pop!_OS/Ubuntu <br><br> - ~Works on Fedora with some workarounds~ |
