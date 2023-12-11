@@ -1,4 +1,4 @@
-credit : https://negativo17.org/nvidia-driver/
+gratitude for drivers : https://negativo17.org/nvidia-driver/
 
 ```
 sudo dnf config-manager --add-repo=https://negativo17.org/repos/fedora-nvidia.repo
@@ -15,5 +15,7 @@ virtualenv -p `which python3.10` .venv
 source .venv/bin/activate
 pip install tensorflow
 sudo dnf install mlocate
+sudo updatedb
 cp $(locate libdevice.10.bc) .
 ```
+TODO: figure out how to make tensorrt work
