@@ -1,3 +1,5 @@
+credit : https://negativo17.org/nvidia-driver/
+
 ```
 sudo dnf config-manager --add-repo=https://negativo17.org/repos/fedora-nvidia.repo
 sudo dnf upgrade
