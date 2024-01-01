@@ -19,4 +19,9 @@ sudo dnf install mlocate
 sudo updatedb
 cp $(locate libdevice.10.bc) .
 ```
+
+```bash
+sudo modprobe -r nvidia_uvm #you might need this sometimes to reload
+```
+
 TODO: figure out how to make tensorrt work
