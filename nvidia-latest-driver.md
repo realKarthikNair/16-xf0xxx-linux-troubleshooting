@@ -1,3 +1,5 @@
+> A better way to install the latest NVIDIA drivers and cuda can be found [here](https://github.com/realKarthikNair/16-xf0xxx-linux-troubleshooting/blob/main/fedora39-tensorflow-gpu.md) 
+
 *This guide exists because neither distro repos nor the official page of NVIDIA drivers download the "latest" drivers for Linux.
 It is partially because certain software doesn't fully support the latest drivers as soon as they are released.*
 
