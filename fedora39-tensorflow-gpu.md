@@ -1,3 +1,5 @@
+> nvidia driver from negativo17 is causing some issues on wayland after the latest update (touchpad and mouse are unusable). I will remove this message when it gets fixed
+
 gratitude for drivers : https://negativo17.org/nvidia-driver/
 
 ```
