@@ -76,7 +76,7 @@ pip uninstall tensorflow[and-cuda]
 pip install tf-nightly[and-cuda]
 ```
 
-2. If you are recieving warnings like ` successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355`, this is caused by a bug that resets `numa_node` to -1 after reboots.
+3. If you are recieving warnings like ` successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355`, this is caused by a bug that resets `numa_node` to -1 after reboots.
 
 Fix 1 (temporary, needs to be run manually after every reboot, recommended if you are new to linux) 
 
@@ -106,4 +106,4 @@ Fix 2 (same as Fix 1 but permanent) [credit](https://stackoverflow.com/a/7022525
   @reboot (echo 0 | tee -a "/sys/bus/pci/devices/<PCI_ID>/numa_node")
   ```
 
-3. TODO: figure out how to make tensorrt work
+4. TODO: figure out how to make tensorrt work
