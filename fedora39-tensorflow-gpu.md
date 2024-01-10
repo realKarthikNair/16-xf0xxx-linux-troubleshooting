@@ -1,7 +1,5 @@
 gratitude for providing an easy to use cuda and cudnn installation : https://negativo17.org/nvidia-driver/
 
-This is a copy of the instructions I have committed [here](https://github.com/realKarthikNair/16-xf0xxx-linux-troubleshooting/blob/main/fedora39-tensorflow-gpu.md)
-
 1. Add negativo17/fedora.nvidia and rpmfusion-nonfree-release repos
 
 ```bash
