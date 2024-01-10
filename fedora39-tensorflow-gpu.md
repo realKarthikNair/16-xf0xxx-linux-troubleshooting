@@ -1,5 +1,7 @@
 gratitude for providing an easy to use cuda and cudnn installation : https://negativo17.org/nvidia-driver/
 
+This is a copy of the instructions I have committed [here](https://github.com/realKarthikNair/16-xf0xxx-linux-troubleshooting/blob/main/fedora39-tensorflow-gpu.md)
+
 1. Add negativo17/fedora.nvidia and rpmfusion-nonfree-release repos
 
 ```bash
@@ -76,34 +78,36 @@ pip uninstall tensorflow[and-cuda]
 pip install tf-nightly[and-cuda]
 ```
 
-3. If you are recieving warnings like ` successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355`, this is caused by a bug that resets `numa_node` to -1 after reboots.
+3. If you are recieving warnings like ` successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355`, this is caused by a bug that resets `numa_node` to -1 after reboots : 
 
-Fix 1 (temporary, needs to be run manually after every reboot, recommended if you are new to linux) 
-
-1. Identify the PCI-ID of your GPU
-2. Set 0 to `/sys/bus/pci/devices/<PCI_ID>/numa_node  
+    Fix 1 (temporary, needs to be run manually after every reboot, recommended if you are new to linux) 
   
-  For example
-  ```bash
-  karthik@fedora:~$ lspci -D | grep NVIDIA
-  0000:01:00.0 VGA compatible controller: NVIDIA Corporation AD107M [GeForce RTX 4060 Max-Q / Mobile] (rev a1)
-  0000:01:00.1 Audio device: NVIDIA Corporation Device 22be (rev a1)
-  karthik@fedora:~$ sudo su
-  [sudo] password for karthik: 
-  root@fedora:/home/karthik# echo 0 | tee -a "/sys/bus/pci/devices/0000:01:00.0/numa_node"
-  0
-  ```
-
-Fix 2 (same as Fix 1 but permanent) [credit](https://stackoverflow.com/a/70225257)
-
-  ```bash
-  # 1) Identify the PCI-ID (with domain) of your GPU
-  #    For example: PCI_ID="0000.81:00.0"
-  lspci -D | grep NVIDIA
-  # 2) Add a crontab for root
-  sudo crontab -e
-  #    Add the following line
-  @reboot (echo 0 | tee -a "/sys/bus/pci/devices/<PCI_ID>/numa_node")
-  ```
-
+    1. Identify the PCI-ID of your GPU
+    2. Set 0 to `/sys/bus/pci/devices/<PCI_ID>/numa_node  
+      
+    For example
+    ```bash
+    karthik@fedora:~$ lspci -D | grep NVIDIA
+    0000:01:00.0 VGA compatible controller: NVIDIA Corporation AD107M [GeForce RTX 4060 Max-Q / Mobile] (rev a1)
+    0000:01:00.1 Audio device: NVIDIA Corporation Device 22be (rev a1)
+    karthik@fedora:~$ sudo su
+    [sudo] password for karthik: 
+    root@fedora:/home/karthik# echo 0 | tee -a "/sys/bus/pci/devices/0000:01:00.0/numa_node"
+    0
+    ```
+    
+  
+    Fix 2 (same as Fix 1 but permanent) [credit](https://stackoverflow.com/a/70225257)
+    
+    ```bash  
+    # 1) Identify the PCI-ID (with domain) of your GPU
+    #    For example: PCI_ID="0000.81:00.0"
+    lspci -D | grep NVIDIA
+    # 2) Add a crontab for root
+    sudo crontab -e
+    #    Add the following line
+    @reboot (echo 0 | tee -a "/sys/bus/pci/devices/<PCI_ID>/numa_node")
+    ```
+    
+  
 4. TODO: figure out how to make tensorrt work
