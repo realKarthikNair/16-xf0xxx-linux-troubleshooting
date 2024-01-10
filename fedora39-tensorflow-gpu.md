@@ -1,4 +1,4 @@
-gratitude for drivers : https://negativo17.org/nvidia-driver/
+gratitude for providing an easy to use cuda and cudnn installation : https://negativo17.org/nvidia-driver/
 
 ```
 sudo dnf config-manager --add-repo=https://negativo17.org/repos/fedora-nvidia.repo
