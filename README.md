@@ -8,7 +8,7 @@ Making linux related notes and troubleshooting for HP Omen 16 R7 7840HS RTX 4060
 
 | Component | Works? | Notes |
 | --------- | ------ | ----- |
-| Display | :heavy_check_mark: |  - The latest kernel as of writing this is 6.5.7 and it only supports 165Hz and 60Hz. For more options [60, 90, 120, 144, 165]Hz you need to use the 6.4.6-76060406-generic kernel. Reasons behind this regression is unknown. Kernels older than 6.4.6-76060406-generic also gives only 165Hz and 60Hz <br><br> - HDR doesn't work since Linux doesn't support HDR yet. <br><br> - Displays colors by default are good enough. For even better color repro, use Adobe RGB color profile. | 
+| Display | :heavy_check_mark: |  - Use nobara Linux of any other distro with the gnome variable refresh rate patches for variable refresh rate. Or, patch yourself. <br><br> - HDR doesn't work since Linux doesn't support HDR yet. <br><br> - Displays colors by default are good enough. For even better color repro, use Adobe RGB color profile. | 
 | Keyboard | :heavy_check_mark: | - You can't control the RGB settings of keyboard on this model from Linux yet. [hp-omen-linux-module](https://github.com/pelrun/hp-omen-linux-module) doesn't work either. However, if you're on dual boot, RGB settings changed from Windows will persist on Linux. <br><br> - You can't control the brightness of the keyboard from Linux either <br><br> - Surprisingly, the calculator key does launch the calculator app on Gnome | 
 | CPU | :heavy_check_mark: <br><br> (Please read the notes on this one) |  - AMD-pstate works from kernel 6.5.x | 
 | Ryzen AI (AMD XDNA) |  :heavy_check_mark: | - HP has enabled it on BIOS so works on Windows but Linux doesn't have support for Ryzen AI yet :( |  
