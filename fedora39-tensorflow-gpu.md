@@ -15,10 +15,9 @@ sudo dnf upgrade
 sudo dnf remove *nvidia*
 ```
 3. Install nvidia-driver from rpm-fusion-nonfree
-> We are not using negativo17/fedora-nvidia for this since there is a glitch with nvidia-driver on negativo17/nvidia-driver since Jan 2024 on Wayland which makes mouse unusable so we are installing nvidia-driver from rpmfusion-nonfree until its fixed (hopefully)
 
 ```bash
-sudo dnf install nvidia-driver --disablerepo=fedora-nvidia --enablerepo=rpmfusion-nonfree
+sudo dnf install nvidia-driver 
 ```
 
 4. Install cuda drivers and cuda development packages and remove xorg-x11-drv-nvidia-cuda and xorg-x11-drv-nvidia-cuda-libs from rpmfusion-nonfree
