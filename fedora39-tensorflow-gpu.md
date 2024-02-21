@@ -14,7 +14,7 @@ sudo dnf upgrade
 ```bash
 sudo dnf remove *nvidia*
 ```
-3. Install nvidia-driver from rpm-fusion-nonfree
+3. Install nvidia-driver 
 
 ```bash
 sudo dnf install nvidia-driver 
