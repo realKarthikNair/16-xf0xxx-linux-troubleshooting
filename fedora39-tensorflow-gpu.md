@@ -37,12 +37,12 @@ sudo dnf remove xorg-x11-drv-nvidia-cuda-libs
 sudo dnf install cuda-cudnn.x86_64 cuda-cudnn-devel.x86_64
 ```
 
-6. If you are on the latest version of Fedora (I am on 39 as of writing this), the default version of Python would be the latest version which won't support tensorflow. So install an older version.
+6. If you are on the latest version of Fedora (I am on 40 as of writing this), the default version of Python would be the latest version which won't support tensorflow. So install an older version.
 
 ```bash
 sudo dnf install python310 
 python3.10 -m ensurepip
-python3.10 -m pip install tensorrt #tensorrt doesnt exactly work on fedora 39 on latest nvidia drivers even with nvidia's official tensorrt package on their website but its good to have this module (i mean i couldnt make it work atleast)
+python3.10 -m pip install tensorrt #tensorrt doesnt exactly work on fedora 40 on latest nvidia drivers even with nvidia's official tensorrt package on their website but its good to have this module (i mean i couldnt make it work atleast)
 ```
 
 7. ```cd``` to your python project path
@@ -56,7 +56,7 @@ sudo updatedb
 cp $(locate libdevice.10.bc) .
 ```
 
-Congratulations! You can now use tensorflow with CUDA on Fedora 39! 
+Congratulations! You can now use tensorflow with CUDA on Fedora 40! 
 
 Footnotes: 
 
