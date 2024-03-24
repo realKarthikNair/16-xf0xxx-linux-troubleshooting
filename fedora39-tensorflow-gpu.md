@@ -1,3 +1,5 @@
+> Tensorflow doesnt work on Cuda 12.4 and Cudnn 9.x as of 24-03-2024. So don't follow these as of now
+
 gratitude for providing an easy to use cuda and cudnn installation : https://negativo17.org/nvidia-driver/
 
 1. Add negativo17/fedora.nvidia and rpmfusion-nonfree-release repos
