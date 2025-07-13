@@ -5,7 +5,7 @@
 
 It sucked on Windows and as of writing this (2024-07-07T22:45:20+00:00), it's available on Linux too now. And it continues to suck.   
 
-**AND THE WORST PART? IT IS ENABLED BY DEFAULT ON LATEST KERNELS, TRIGGERED BY POWER-PROFILES-DAEMON, AND THERE IS NO FUCKING GUI (YET) TO DISABLE IT.** (On Windows, you atleast have a GUI to disable it)    
+**AND THE WORST PART? IT IS ENABLED BY DEFAULT ON LATEST KERNELS, TRIGGERED BY POWER-PROFILES-DAEMON OR tuned-ppd (depending on your Fedora version), AND THERE IS NO FUCKING GUI (YET) TO DISABLE IT.** (On Windows, you atleast have a GUI to disable it)    
 
 These are the kind of stupid decisions that keep normal people away from Linux! 
 
@@ -28,6 +28,8 @@ cat /sys/class/backlight/amdgpu_bl1/device/amdgpu/panel_power_savings
 
 ### Let's fix it by DISABLING it!
 
+#### For Fedora <=41 
+
 1. Edit power-profiles-daemon.service
 
 ```bash
@@ -49,13 +51,22 @@ ExecStart=/usr/libexec/power-profiles-daemon --block-action=amdgpu_panel_power
 
 NOTE : The path `/usr/libexec/power-profiles-daemon` might vary across distributions/versions.... This is from my Fedora 40 Workstation installation. Run `systemctl status power-profiles-daemon.service` to see where your binary is!
 
-3. Restart the service
+3. Restart the service and/or reboot system
 
 ```bash
 systemctl restart power-profiles-daemon.service
 ```
 
+4. Run `cat /sys/class/backlight/amdgpu_bl1/device/amdgpu/panel_power_savings` again and verify the value (It should be `0`)
+
 Enjoy!!!
+
+#### For Fedora >=42 (follow for 41 too incase the above didnt work for you)
+
+1. `sudo cp -r /lib/tuned/profiles/* /etc/tuned/profiles`
+2. Edit `/etc/tuned/profiles/<mode>/tuned.conf` files where `<mode>` are `powersave`, `balanced-battery` and `balanced` directories and set `panel_power_savings=0` by modifying whatever the existing value was
+3. reboot
+4. Run `cat /sys/class/backlight/amdgpu_bl1/device/amdgpu/panel_power_savings` again and verify the value (It should be `0`)
 
 
 Citations:
@@ -63,5 +74,6 @@ Citations:
 - https://bbs.archlinux.org/viewtopic.php?id=296000
 - https://gitlab.freedesktop.org/upower/power-profiles-daemon/-/commit/126f7d3a5411f1643cb58f1791e561b6324be753#8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
 - https://gitlab.freedesktop.org/drm/amd/-/issues/3432
+- https://www.reddit.com/r/Fedora/comments/1j4uqr5/comment/mgc3502/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button
   
 
