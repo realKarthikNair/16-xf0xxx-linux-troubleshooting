@@ -21,7 +21,7 @@ Making linux related notes and troubleshooting for HP Omen 16 R7 7840HS RTX 4060
 | Headphone jack |  | - Headphone jack is buggy on Pop!_OS <br><br> - Works as expected on Fedora 39/40 |
 | Microphone | :heavy_check_mark: |  - Microphone works as expected. |
 | Webcam | :heavy_check_mark: |  - Webcam works as expected. |
-| Fans | :heavy_check_mark: |  - Fans seems to work fine (it does work when temps are above 40-50 degree celcius) though lm-sensors doesn't show the fan speed. <br><br> - I will update this section later. <br><br> - ~You can't manually control fans of this machine on Linux yet~ : there's progress check out [this](https://github.com/realKarthikNair/16-xf0xxx-EC-Dumps) repo with EC dumps |
+| Fans | :heavy_check_mark: |  - Auto/BIOS mode no longer works good on my unit and I dont really care to debug atp if it's a software or hardware issue because manual controls are finally up in [kernel](https://github.com/torvalds/linux/commit/55b964dfbadc3729d3606849471eab11705f578a) <br><br> - You can now use `pwm1_enable` and `pwm1` with temperature sensor data to make your own custom temp-fan curves! <br><br> More [here](https://github.com/realKarthikNair/16-xf0xxx-EC-Dumps/blob/master/README.md) |
 | Touchpad | :heavy_check_mark: |  - Touchpad works as expected. <br><br> - multi touch gestures works too. |
 | USB ports | :heavy_check_mark: <br><br> | - All USB ports work fine <br><br> |
 | Bluetooth | :heavy_check_mark: | | 
