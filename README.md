@@ -21,7 +21,7 @@ Making linux related notes and troubleshooting for HP Omen 16 R7 7840HS RTX 4060
 | Headphone jack |  | - Headphone jack is buggy on Pop!_OS <br><br> - Works as expected on Fedora 39/40 |
 | Microphone | :heavy_check_mark: |  - Microphone works as expected. |
 | Webcam | :heavy_check_mark: |  - Webcam works as expected. |
-| Fans | :heavy_check_mark: |  - Auto/BIOS mode no longer works good on my unit and I dont really care to debug atp if it's a software or hardware issue because manual controls are finally up in [kernel](https://github.com/torvalds/linux/commit/55b964dfbadc3729d3606849471eab11705f578a) <br><br> - You can now use `pwm1_enable` and `pwm1` with temperature sensor data to make your own custom temp-fan curves! <br><br> More [here](https://github.com/realKarthikNair/16-xf0xxx-EC-Dumps/blob/master/README.md) |
+| Fans | :heavy_check_mark: |  - Auto/BIOS mode no longer works good on my unit and I dont really care to debug atp if it's a software or hardware issue because manual controls are finally up in [kernel](https://github.com/torvalds/linux/commit/55b964dfbadc3729d3606849471eab11705f578a) <br><br> - You can now use `pwm1_enable`, `pwm1` and `pwm2` with temperature sensor data to make your own custom temp-fan curves! <br><br> - Since kernel 7.3, `pwm1` is the CPU fan and `pwm2` is the GPU fan (before 7.3, `pwm1` set both). Set both, otherwise the GPU fan can stay at 0 RPM. <br><br> More [here](https://github.com/realKarthikNair/16-xf0xxx-EC-Dumps/blob/master/README.md) |
 | Touchpad | :heavy_check_mark: |  - Touchpad works as expected. <br><br> - multi touch gestures works too. |
 | USB ports | :heavy_check_mark: <br><br> | - All USB ports work fine <br><br> |
 | Bluetooth | :heavy_check_mark: | | 
